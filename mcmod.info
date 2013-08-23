@@ -1,0 +1,18 @@
+[
+{
+"modid": "ALMOUSE",
+"name": "Almost Useless Tools",
+"description": "A mod with tools that are useless! Well, almost.",
+"version": "0.1",
+"url": "",
+"authorList": [
+"p01ng"
+],
+"credits": "Me",
+"logoFile": "assets/almouse/logoFile.png",
+"screenshots": [],
+"dependencies": ["forge-9.10.0.789"
+],
+"mcversion": "1.6.2"
+}
+]
