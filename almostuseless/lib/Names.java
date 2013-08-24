@@ -10,6 +10,18 @@ public class Names {
 	public static final String rake_unlocalizedName = "rake";
 	public static final String rake_name = "Beach Rake";
 	
+	public static final String shellItems = "Shell";
+	public static final String[] shell_unlocalizedName = {
+		"shellAuger",
+		"shell2",
+		"shell3"
+	};
+	public static final String[] shell_name = {
+		"Auger",
+		"Shell 2",
+		"Shell 3"
+	};
+	
 	// Blocks
 	public static final String shellSand_unlocalizedName = "shellSand";
 	public static final String shellSand_name = "Shell Sand";

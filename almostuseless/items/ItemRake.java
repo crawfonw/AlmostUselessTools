@@ -1,6 +1,7 @@
 package almostuseless.items;
 
-import almostuseless.blocks.UselessBlocks;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,6 +13,8 @@ import net.minecraftforge.common.FakePlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
+import almostuseless.blocks.UselessBlocks;
+import almostuseless.lib.Names;
 
 public class ItemRake extends ItemTool {
 	
@@ -42,13 +45,20 @@ public class ItemRake extends ItemTool {
 				boolean air = world.isAirBlock(par4, par5 + 1, par6);
 
 				if (par7 != 0 && air && i1 == UselessBlocks.shellSand.blockID) {
+					Block block = Block.sand;
+					world.playSoundEffect((double)((float)par4 + 0.5F), (double)((float)par5 + 0.5F), (double)((float)par6 + 0.5F), block.stepSound.getStepSound(), (block.stepSound.getVolume() + 1.0F) / 2.0F, block.stepSound.getPitch() * 0.8F);
 					if (world.isRemote) {
 						return true;
 					} else {
-						EntityItem entityitem = new EntityItem(world, player.posX, player.posY - 1.0D, player.posZ, new ItemStack(UselessItems.diamondium.itemID, 1, 0));
+						world.setBlock(par4, par5, par6, block.blockID);
+						
+						Random generator = new Random();
+						int meta = generator.nextInt(Names.shell_unlocalizedName.length);
+						EntityItem entityitem = new EntityItem(world, player.posX, player.posY - 1.0D, player.posZ, new ItemStack(UselessItems.shell.itemID, 1, meta));
 						world.spawnEntityInWorld(entityitem);
 						if (!(player instanceof FakePlayer))
 			                entityitem.onCollideWithPlayer(player);
+						
 						par1ItemStack.damageItem(1, player);
 						return true;
 					}
