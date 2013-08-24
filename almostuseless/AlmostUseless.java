@@ -21,7 +21,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION)
 @NetworkMod(channels = {ModInfo.CHANNEL}, clientSideRequired = true, serverSideRequired = true)
 public class AlmostUseless {
-public static CreativeTabs autab = new AlmostUselessTab(CreativeTabs.getNextID(), ModInfo.NAME);
+	
+	public static CreativeTabs autab = new AlmostUselessTab(CreativeTabs.getNextID(), ModInfo.NAME);
 	
 	@SidedProxy(clientSide = ModInfo.PROXY_LOCATION + ".ClientProxy", serverSide = ModInfo.PROXY_LOCATION + ".CommonProxy")
 	public static CommonProxy proxy;
