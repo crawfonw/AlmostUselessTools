@@ -6,7 +6,7 @@ import almostuseless.lib.Ids;
 import almostuseless.lib.Names;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class Items {
+public class UselessItems {
 	
 	public static Item diamondium;
 	public static Item rake;

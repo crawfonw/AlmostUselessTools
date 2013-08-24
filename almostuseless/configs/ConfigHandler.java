@@ -14,6 +14,8 @@ public class ConfigHandler {
 		
 		Ids.diamondium_actual = config.getItem(config.CATEGORY_ITEM, Names.diamondium_name, Ids.diamondium_default).getInt() - 256;
 		
+		Ids.shellSand_actual = config.getBlock(config.CATEGORY_BLOCK, Names.shellSand_name, Ids.shellSand_default).getInt();
+		
 		config.save();
 	}
 }

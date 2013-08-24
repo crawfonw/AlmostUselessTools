@@ -1,9 +1,11 @@
 package almostuseless;
 
+import java.util.logging.Level;
+
 import net.minecraft.creativetab.CreativeTabs;
-import almostuseless.blocks.Blocks;
+import almostuseless.blocks.UselessBlocks;
 import almostuseless.configs.ConfigHandler;
-import almostuseless.items.Items;
+import almostuseless.items.UselessItems;
 import almostuseless.lib.AlmostUselessTab;
 import almostuseless.lib.LogHelper;
 import almostuseless.lib.ModInfo;
@@ -35,13 +37,19 @@ public class AlmostUseless {
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
-		Items.init();
-		Items.addNames();
-
-		Blocks.init();
-		Blocks.addNames();
+		LogHelper.log(Level.INFO, "Loading items");
+		UselessItems.init();
+		UselessItems.addNames();
+		LogHelper.log(Level.INFO, "Items loaded");
 		
+		LogHelper.log(Level.INFO, "Loading blocks");
+		UselessBlocks.init();
+		UselessBlocks.addNames();
+		LogHelper.log(Level.INFO, "Blocks loaded");
+
+		LogHelper.log(Level.INFO, "Loading recipes");
 		Recipes.init();
+		LogHelper.log(Level.INFO, "Recipes loaded");
 		
 		LanguageRegistry.instance().addStringLocalization("itemGroup." + ModInfo.NAME, "en_US", ModInfo.NAME);
 	}

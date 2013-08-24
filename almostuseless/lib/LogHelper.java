@@ -3,7 +3,7 @@ package almostuseless.lib;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import tutorial.lib.ModInfo;
+import almostuseless.lib.ModInfo;
 import cpw.mods.fml.common.FMLLog;
 
 public class LogHelper {

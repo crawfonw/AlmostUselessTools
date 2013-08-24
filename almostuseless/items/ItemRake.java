@@ -1,5 +1,6 @@
 package almostuseless.items;
 
+import almostuseless.blocks.UselessBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,7 +25,7 @@ public class ItemRake extends ItemTool {
 		if (!player.canPlayerEdit(par4, par5, par6, par7, par1ItemStack)) {
 			return false;
 		} else {
-			if (world.getBlockId(par4, par5, par6) == Block.sand.blockID) {
+			if (world.getBlockId(par4, par5, par6) == UselessBlocks.shellSand.blockID) {
 				// This is shady
 				UseHoeEvent event = new UseHoeEvent(player, par1ItemStack, world, par4, par5, par6);
 
@@ -40,11 +41,11 @@ public class ItemRake extends ItemTool {
 				int i1 = world.getBlockId(par4, par5, par6);
 				boolean air = world.isAirBlock(par4, par5 + 1, par6);
 
-				if (par7 != 0 && air && i1 == Block.sand.blockID) {
+				if (par7 != 0 && air && i1 == UselessBlocks.shellSand.blockID) {
 					if (world.isRemote) {
 						return true;
 					} else {
-						EntityItem entityitem = new EntityItem(world, player.posX, player.posY - 1.0D, player.posZ, new ItemStack(Items.diamondium.itemID, 1, 1));
+						EntityItem entityitem = new EntityItem(world, player.posX, player.posY - 1.0D, player.posZ, new ItemStack(UselessItems.diamondium.itemID, 1, 0));
 						world.spawnEntityInWorld(entityitem);
 						if (!(player instanceof FakePlayer))
 			                entityitem.onCollideWithPlayer(player);
