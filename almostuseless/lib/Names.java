@@ -16,13 +16,13 @@ public class Names {
 	public static final String shellItems = "Seashell";
 	public static final String[] shell_unlocalizedName = {
 		"shellAuger",
-		"shell2",
-		"shell3"
+		"shellTurkeyWing",
+		"shellJunonia"
 	};
 	public static final String[] shell_name = {
 		"Auger",
-		"Shell 2",
-		"Shell 3"
+		"Turkey Wing",
+		"Junonia"
 	};
 	
 	public static final String gemstoneItems = "Gemstone";
