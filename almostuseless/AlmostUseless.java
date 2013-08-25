@@ -25,6 +25,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class AlmostUseless {
 	
 	public static CreativeTabs autab = new AlmostUselessTab(CreativeTabs.getNextID(), ModInfo.NAME);
+//	public static EnumToolMaterial matname = EnumHelper.addToolMaterial("unlocalNameofMaterial",harvest level,maxUses,efficiency,damage,enchantibility);
 	
 	@SidedProxy(clientSide = ModInfo.PROXY_LOCATION + ".ClientProxy", serverSide = ModInfo.PROXY_LOCATION + ".CommonProxy")
 	public static CommonProxy proxy;

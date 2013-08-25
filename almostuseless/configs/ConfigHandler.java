@@ -13,8 +13,10 @@ public class ConfigHandler {
 		config.load();
 		
 		Ids.diamondium_actual = config.getItem(config.CATEGORY_ITEM, Names.diamondium_name, Ids.diamondium_default).getInt() - 256;
+		Ids.diamondillium_actual = config.getItem(config.CATEGORY_ITEM, Names.diamondillium_name, Ids.diamondillium_default).getInt() - 256;
 		Ids.rake_actual = config.getItem(config.CATEGORY_ITEM, Names.rake_name, Ids.rake_default).getInt() - 256;
 		Ids.shell_actual = config.getItem(config.CATEGORY_ITEM, Names.shellItems, Ids.shell_default).getInt() - 256;
+		Ids.gemstone_actual = config.getItem(config.CATEGORY_ITEM, Names.gemstoneItems, Ids.gemstone_default).getInt() - 256;
 		
 		Ids.shellSand_actual = config.getBlock(config.CATEGORY_BLOCK, Names.shellSand_name, Ids.shellSand_default).getInt();
 		
